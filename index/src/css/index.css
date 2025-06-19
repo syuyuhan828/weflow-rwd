@@ -1,0 +1,333 @@
+.scrollController{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 700vh;
+    width: 100%;
+}
+
+.IMG{
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+    height: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.firstImg{
+    position: fixed;
+    top: 0;
+    left: 0;
+    inset: 0;
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    /* height: 100%; */
+    overflow: hidden;
+}
+
+.lastImg{
+    margin: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    inset: 0;
+}
+
+.firstImg img{
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    /* transform-origin: center center; */
+}
+
+.lastImg img{
+    position: fixed;
+    display: block;
+    width: 150vw;
+    height: 150vh;
+    /* height: 120%; */
+    object-fit: fill;
+    transform-origin: center center;
+    z-index: -1;
+}
+
+
+.rabbitImg{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    top: top;
+    left: 0;
+    width: 42vw;
+}
+
+.rabbitImg img{
+    transform:"translate(-50%, -50%)";
+}
+
+.sloganImg{
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: flex-start;
+        width: 40vw;
+        /* border: 1px solid  red; */
+}
+
+.sloganImg img{
+        width: 80%;
+}
+
+.page2{
+    position: absolute;
+}
+
+.aboutUsSection h2,
+.aboutUsSection h4,
+.aboutUsSection p {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.page3{
+    position: absolute;
+}
+
+
+
+/* 晚點做RWD */
+div.priceCardSection{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.pricePlan{
+    font-family: var(--font);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100%;
+}
+
+.pricePlan h2{
+    margin-bottom: 1.2vh;
+    font-size: 40px;
+    margin-top: 0;
+}
+
+.pricePlan ul{
+    height: 20vh;
+    padding: 0 0 0 20px;
+    list-style-type: disc;
+    font-size: 20px;
+    line-height: 1.6;
+}
+
+.pricePlan ul li{
+    margin: 0 2vh 0;
+}
+
+.plan-price-description{
+    margin-top: 10vh;
+    font-weight: 600;
+    font-size: 18px;
+    margin-bottom: 0;
+}
+
+.plan-price{
+    font-size: 60px;
+    color: #00ff99;
+}
+
+.MenuBar{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    /* margin-top: 18vh; */
+    font-family: var(--font);
+    z-index: -1;
+}
+
+.MunuBarList{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    inset: 0;
+    height: 100vh;
+    position: absolute;
+    /* background: url("/img/menu_back.png") center / cover no-repeat; */
+}
+
+.BarListItem{
+    margin-top: 18vh;
+}
+
+.MunuBarList div li{
+    position: relative;
+    margin-top: 6vh;
+    margin-left: 16vw;
+    font-size: 60px;
+    width: 30%;
+    border-bottom: 1px solid #fff;
+}
+
+@keyframes menuAvaTween {
+    0%{
+        transform: translateY(0%);
+    }
+    50%{
+        transform: translateY(10%);
+    }
+    100%{
+        transform: translateY(0%);
+    }
+}
+
+.menuAvatar{
+    position: absolute;
+    bottom: 5vh;
+    right: 0;
+    animation: menuAvaTween linear 2s infinite;
+}
+
+.menuBack{
+    position: absolute;
+    z-index: -1;
+    width: 100vw;
+    height: 100vh; 
+}
+
+.MunuBarList div li a{
+    text-decoration: none;
+    color: #fff;
+
+}
+
+.-none{
+    display: none;
+}
+
+/* Laptop */
+@media (min-width: 1200px){
+    .rabbitImg img{
+        width: 50%;
+    }
+
+    .servicePlanet img{
+        width: 60%;
+    }
+
+    
+
+}
+
+/* tablet horizon*/
+@media (max-width: 1200px) and (min-width: 1024px){
+    .rabbitImg img{
+        width: 50%;
+    }
+
+    .servicePlanet img{
+        width: 70%;
+    }
+
+    .MunuBarList div li{
+        font-size: var(--font-size-md)
+    }
+    
+}
+
+/* tablet verticle */
+@media (max-width: 1024px) and (min-width:768px){
+    .rabbitImg img{
+        width: 70%;
+    }
+
+    .servicePlanet img{
+        width: 100%;
+    }
+
+    .pricePlan{
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+    }
+
+    .pricePlan h2{
+        font-size: 28px;
+        
+    }
+
+    .pricePlan ul{
+        font-size: 18px;
+        
+    }
+
+    .plan-price-description{
+        font-size: 16px;
+    }
+
+    .plan-price {
+        font-size: 54px;
+    }
+
+    .MunuBarList div li{
+        font-size: var(--font-size-md)
+    }
+    
+}
+
+/* mobile phone */
+@media (max-width: 768px){
+    .rabbitImg img{
+        width: 100%;
+    }
+    .sloganImg img{
+        width: 150%;
+    }
+    .servicePlanet img{
+        width: 100%;
+    }
+    .pricePlan h2{
+        font-size: 24px;
+        margin-bottom: 2vh;
+    }
+
+    .pricePlan ul{
+        font-size: 16px;
+    }
+
+
+    .plan-price-description{
+        font-size: 16px;
+        margin-bottom: 2vh;
+    }
+
+    .plan-price {
+        font-size: 48px;
+    }
+
+    .MunuBarList div li{
+        font-size: 32px;
+    }
+
+    .menuAvatar{
+        position: absolute;
+        right: 0;
+        width: 80%;
+    }
+
+    .menuBack{
+        height: 150vh;
+        width: 150vw;
+    }
+}
+

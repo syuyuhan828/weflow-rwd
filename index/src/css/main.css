@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.header{
+    @apply lg:z-[9999] w-full relative mt-0 top-0 bg-transparent
+}
+
+.headerWrapperLg{
+    @apply hidden lg:flex flex-row w-full justify-start mt-[5vh] mx-auto mb-auto
+}
+
+.headerWrapperMd{
+    @apply md:flex items-center justify-between w-full mx-auto mt-[5vh] mb-auto lg:hidden hidden
+}
+
+/* MD */
+.logoContainerMd{
+    @apply ml-[2vw] max-w-[15vw] min-w-[10vw]
+}
+
+.nav-a-style{
+    @apply after:content-[""] after:block after:h-[2px] after:w-0 after:bg-black after:transition-all after:duration-300 after:hover:w-full
+}
+
+.nav-a-style-white{
+    @apply after:content-[""] after:block after:h-[2px] after:w-0 after:bg-white after:transition-all after:duration-300 after:hover:w-full
+}
+
+.mdDeviceNav{
+    @apply flex items-center justify-center bg-black/30 backdrop-blur border-[2px] border-[#fff] rounded-[20px] p-[4px] transition-all duration-300 ease-in-out w-[130px] text-[#fff] font-custom mr-[2vw] ml-auto 
+}
+
+.navListBtn{
+    @apply relative w-[24px] h-[14px] my-0 mx-[4px]  flex flex-col justify-between transition-all duration-300 ease-in
+}
+
+.navListItem{
+    @apply block h-[2px] rounded-[2px] bg-[#fff] transition-all duration-300 ease-in
+}
+
+/* SM */
+.headerWrapperSm{
+    @apply flex items-center justify-between w-full my-auto mt-[5vh] mb-auto lg:hidden md:hidden
+}
+
+.logoContainerSm{
+    @apply ml-[2vw] max-w-[17vw] min-w-[12vw]
+}
+
+.smDeviceNav{
+    @apply flex items-center justify-center bg-black/30 backdrop-blur border border-[#fff] rounded-[20px] p-[2px] transition-all duration-300 ease-in-out w-[100px] text-[#fff] font-custom mr-[2vw] ml-auto 
+}
+

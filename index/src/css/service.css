@@ -1,0 +1,81 @@
+@keyframes toolkitFloat {
+    0%   { transform: translate(0, 0);}
+    50%  { transform: translate(-10px, 20px);}
+    100% { transform: translate(0, 0);}
+}
+
+@keyframes avatarFloat {
+    0%   { transform: translate(0, 0);}
+    50%  { transform: translate(-15px, 30px);}
+    100% { transform: translate(0, 0);}
+}
+
+
+@keyframes pop-out{
+    0%{
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0%);
+    }
+}
+
+@keyframes shadowEffect {
+    0%{
+        filter: blur(5px);
+    }
+    50%{
+        filter: blur(7px);
+    }
+    100%{
+        filter: blur(5px);
+        
+    }
+}
+
+@keyframes floatUpDownAvatar {
+    0%   { transform: translateY(0);}
+    50%  { transform: translateY(-10px);}
+    100% { transform: translateY(0);}
+}
+
+
+.Service{
+    animation: pop-out 0.5s ease;
+}
+
+.avatarbox::after{
+    content: "";
+    position: absolute;
+    bottom: -2px; 
+    left: 40%;
+    transform: translateX(-50%);
+    width: 60%;
+    height: 10px;
+    background: radial-gradient(ellipse at center, rgba(0, 0, 0, 1) 0%, transparent 80%);
+    filter: blur(6px);
+    z-index: -1;
+    animation: shadowEffect 2s ease-out infinite;
+}
+
+@media screen and (min-width: 1280px){
+    .avatarbox::after{
+        left: 30%;
+    }
+}
+
+.avatarbox img{
+    animation: floatUpDownAvatar 2s ease-out infinite;
+}
+
+.toolkit{
+    rotate: 45deg;
+    animation: toolkitFloat 4s ease-in-out infinite;
+    -webkit-user-drag: none;
+}
+
+.floatAvatar{
+    animation: avatarFloat 3s ease-in-out infinite;
+    -webkit-user-drag: none;
+}

@@ -1,0 +1,336 @@
+:root{
+    --font: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    --font-size-lg: 18px;
+    --font-size-md: 52px;
+    --font-size-md-context: 24px;
+    --font-size-sm: 18px;
+    --default-color: #fff;
+}
+
+
+
+/* RWD Configuration */
+.header{
+    z-index: 9999;
+    width: 100%;
+    position: fixed;
+    margin-top: 0;
+    top: 0;
+    background-color: transparent;
+}
+
+
+/* Large Screen Configuration */
+@media screen and (min-width: 1200px){
+    .headerWrapperLg{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        justify-content: flex-start;
+        margin: 5vh auto auto;
+    }
+
+    .headerWrapperMd *{
+        display: none;
+    }
+
+    .headerWrapperSm{
+        display: none
+    }
+
+    .navBar *{
+        display: none;
+    }
+
+    .logoContainer{
+        margin-left: 2vw;
+        width: 30%;
+    }
+
+    .logoContainer a img{
+        width: 10vw;
+    }
+
+    .headerNav{
+        display: flex;
+        width: 50%;
+        margin-left: 8vw;
+        align-items: center
+    }
+
+    .headerNav ul{
+        display: flex;
+        flex-direction: row;
+        list-style-type: none;
+        font-family: var(--font);
+        font-size: var(--font-size-lg);
+    }
+
+    .headerNav ul li{
+        margin: 0 15px;
+    }
+
+    .headerNav ul li a{
+        text-decoration: none;
+        color: var(--default-color);
+        letter-spacing: 6px;
+    }
+
+    .headerNav ul li a::after{
+        content: "";
+        display: block;
+        height: 2px;
+        width: 0%;
+        background-color: var(--default-color);
+        transition: .3s;
+    }
+
+    .headerNav ul li a:hover::after{
+        width: 100%;
+    }
+
+
+    .headerNavListCvContainer{
+        margin-left: auto;
+        display: flex;
+        align-items: center;
+    }
+
+    .headerNavListCvContainer ul{
+        list-style-type: none;
+        display: flex;
+        margin-left: auto;
+        margin-right: 5px;
+        /* filter: brightness(0) invert(1); */
+        font-family: var(--font);
+        font-size: var(--font-size-lg);
+    }
+
+    .headerNavListCvContainer ul li{
+        display: flex;
+        flex-wrap: nowrap;
+        list-style-type: none;
+        margin: 0 10px;
+        cursor: pointer;
+        font-size: var(--font-size-lg);
+    }
+
+    .headerNavListCvContainer ul li a{
+        letter-spacing: 2px;
+        text-decoration: none;
+        color: var(--default-color);
+        border: 2px solid var(--default-color);
+        padding: 10px 15px;
+        border-radius: 40px;;
+    }
+
+    /* #contact::before{
+        content: "";
+        display: inline-block;
+        background-image: url("img/contact-icon.svg") center / contain no-repeat;
+        width: 20px;
+        height: 20px;
+        margin: auto 5px;
+        vertical-align:  middle;
+    } */
+
+    
+}
+
+/* tablet configuration */
+@media (min-width: 761px) and (max-width: 1200px){
+    .headerWrapperLg * {
+        display: none;
+    }
+
+    .headerWrapperSm *{
+        display: none;
+    }
+    .navBar{
+        display: none;
+    }
+
+    .headerWrapperMd {
+        display: flex;
+        align-items: center; 
+        justify-content: space-between; 
+        width: 100%;
+        margin: 5vh auto auto;
+    }
+
+    .logoContainer{
+        margin-left: 2vw;
+        max-width: 15vw;
+        min-width: 10vw;
+    }
+
+    .logoContainer a img{
+        max-width: 100%;
+    }
+
+    .mdDeviceNav{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(0, 0, 0, 0.3019607843);
+        border: solid 1px var(--default-color);
+        border-radius: 20px;
+        padding: 4px;
+        transition: all 0.3s ease;
+        width: 130px;
+        color: var(--default-color);
+        font-family: var(--font);
+        margin-right: 2vw;
+        margin-left: auto;
+    }
+
+
+    .navListBtn{
+        position: relative;
+        width: 24px;
+        height: 14px;
+        margin: 0 4px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        transition: all 0.3s ease;
+    }
+
+    .navListItem{
+        display: block;
+        width: 100%;
+        height: 2px;
+        border-radius: 2px;
+        background-color: var(--default-color);
+        transition: all 0.3s ease;
+    }
+
+    .ListItemTop{
+        position: absolute;
+        top: 0;
+    }
+
+    .ListItemMid{
+        position: absolute;
+        top: 50%;
+        width: 60%
+    }
+
+    .ListItemBot{
+        position: absolute;
+        bottom: 0;
+        width: 30%;
+    }
+
+    .mdDeviceNav p{
+        color: var(--default-color);
+        font-family: var(--font);
+        font-size: var(--font-size-md-context);
+    }
+
+    .navHeaderMd{
+        position: absolute;
+    }
+
+
+
+    .navHeaderMd .logoContainer{
+        max-width: 15vw;
+        min-width: 10vw;
+    }
+
+    .navHeaderMd div img{
+        max-width: 100%;
+    }
+    
+    
+
+}
+
+/* small device configuration */
+@media screen and (max-width: 761px){
+    .headerWrapperLg *{
+        display: none;
+    }
+
+    .headerWrapperMd *{
+        display: none;
+    }
+
+    .headerWrapperSm {
+        display: flex;
+        align-items: center; 
+        justify-content: space-between; 
+        width: 100%;
+        margin: 5vh auto auto;
+    }
+
+    .logoContainer{
+        margin-left: 2vw;
+        max-width: 15vw;
+        min-width: 10vw;
+    }
+
+    .logoContainer a img{
+        max-width: 100%;
+    }
+
+    .smDeviceNav{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 1;
+        background: rgba(0, 0, 0, 0.3019607843);
+        border: solid 1px var(--default-color);
+        border-radius: 20px;
+        padding: 4px;
+        transition: all 0.3s ease;
+        width: 100px;
+        margin-right: 2vw;
+        margin-left: auto;
+    }
+
+    .navListBtn{
+        position: relative;
+        width: 24px;
+        height: 14px;
+        margin: 0 4px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        transition: all 0.3s ease;
+    }
+
+    .navListItem{
+        display: block;
+        width: 100%;
+        height: 2px;
+        border-radius: 2px;
+        background-color: var(--default-color);
+        transition: all 0.3s ease;
+    }
+
+    .ListItemTop{
+        position: absolute;
+        top: 0;
+    }
+
+    .ListItemMid{
+        position: absolute;
+        top: 50%;
+        width: 60%
+    }
+
+    .ListItemBot{
+        position: absolute;
+        bottom: 0;
+        width: 30%;
+    }
+
+    .smDeviceNav p{
+        color: var(--default-color);
+        font-family: var(--font);
+    }
+    
+    
+}
