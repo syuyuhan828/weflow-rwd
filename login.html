@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>WeFlow-Login</title>
+      <script type="module" crossorigin src="/weflow-rwd/assets/login-DGjsLOss.js"></script>
+      <link rel="modulepreload" crossorigin href="/weflow-rwd/assets/modulepreload-polyfill-B5Qt9EMX.js">
+      <link rel="stylesheet" crossorigin href="/weflow-rwd/assets/login-BBOsDIgV.css">
+    </head>
+    <body>
+        <div class="WeFlowLogo">
+            <a href="/weflow-rwd/index.html">
+                <img src="img/weflow-logo.png" alt="" w="300">
+            </a>
+        </div>
+        <div class="login-wrapper">
+            <svg width="800" height="800" viewBox="0 0 500 500" class="wave-bg">
+                <path id="wavePath" stroke="#767DBF" fill="none"/>
+                <path id="wavePath2" stroke="#DAB6CF" fill="none"/>
+                <path id="wavePath3" stroke="#ffffff" fill="none"/>
+            </svg>
+
+            <form id="loginForm" class="login-form">
+                <h2 id="formTitle">Login</h2>
+                <input type="text" id="username" placeholder="Username" required />
+                <input type="password" id="password" placeholder="Password" required />
+                <button id="submitButton" type="submit">Login</button>
+                <p id="toggleLink">New user? Register</p>
+                <p id="errorMessage" class="error-message"></p>
+            </form>
+        </div>
+
+    </body>
+</html>
